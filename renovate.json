@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "config:base",
+    "group:monorepos",
+    ":semanticCommits",
+    ":semanticCommitTypeAll(chore)",
+    ":semanticCommitScopeDisabled"
+  ],
+  "timezone": "Asia/Tokyo",
+  "schedule": ["every weekend"],
+  "branchConcurrentLimit": 5,
+  "branchPrefix": "chore-renovate-",
+  "dependencyDashboard": false,
+  "major": {
+    "stabilityDays": 7
+  },
+  "minor": {
+    "stabilityDays": 3
+  },
+  "patch": {
+    "stabilityDays": 2
+  }
+}
