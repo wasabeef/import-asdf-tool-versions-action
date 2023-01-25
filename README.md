@@ -1,4 +1,4 @@
-# ⚒️ Import .tool-versions of asdf to GitHub Actions workflows
+# ⚒️ Import .tool-versions of asdf to GitHub Actions
 
 ```yaml
 jobs:
