@@ -14,6 +14,8 @@ jobs:
         uses: actions/checkout@v3
       - uses: wasabeef/import-asdf-tool-versions-action@v1.0.0
         id: asdf
+        # with:
+        #   path: .tool-versions # Default
       - name: Echo asdf
         run: |
           echo "${{ steps.asdf.outputs.flutter }}"
