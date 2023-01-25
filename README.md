@@ -1,5 +1,6 @@
 # ⚒️ Import .tool-versions of asdf to GitHub Actions
 
+## Usage
 ```yaml
 jobs:
   build:
@@ -9,8 +10,6 @@ jobs:
         uses: actions/checkout@v3
       - uses: wasabeef/import-asdf-tool-versions-action@v1.0.0
         id: asdf
-        with:
-          path: .tool-versions
       - name: Echo asdf
         run: |
           echo "${{ steps.asdf.outputs.flutter }}"
@@ -19,4 +18,16 @@ jobs:
           echo "${{ steps.asdf.outputs.gradle }}"
           echo "${{ steps.asdf.outputs.java }}"
           echo "${{ steps.asdf.outputs.kotlin }}"
+```
+
+### Samples
+Use with `subosito/flutter-action`
+```yaml
+- uses: wasabeef/import-asdf-tool-versions-action@v1.0.0
+  id: asdf
+- uses: subosito/flutter-action@v2.8.0
+  with:
+    channel: stable
+    flutter-version: ${{ steps.asdf.outputs.flutter }}
+    cache: true
 ```
