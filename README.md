@@ -1,5 +1,9 @@
 # ⚒️ Import .tool-versions of asdf to GitHub Actions
 
+
+Import `.tool-versions` of [asdf](https://asdf-vm.com/) to GitHub Actions workflows.
+
+
 ## Usage
 ```yaml
 jobs:
