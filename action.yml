@@ -1,0 +1,11 @@
+name: 'Import .tool-versions'
+description: 'Import .tool-versions file to GitHub Actions workflow'
+author: "Daichi Furiya / @wasabeef"
+inputs:
+  path:
+    description: '.tool-versions path'
+    required: true
+    default: '.tool-versions'
+runs:
+  using: 'node16'
+  main: 'index.js'

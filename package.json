@@ -1,0 +1,33 @@
+{
+  "name": "import-asdf-tool-versions-action",
+  "version": "1.0.0",
+  "description": "Import .tool-versions file to GitHub Actions workflow",
+  "keywords": [
+    "import",
+    "asdf",
+    ".tool-version"
+  ],
+  "homepage": "https://github.com/actions/hello-world-javascript-action#readme",
+  "bugs": {
+    "url": "https://github.com/actions/hello-world-javascript-action/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/actions/hello-world-javascript-action.git"
+  },
+  "license": "MIT",
+  "author": "wasabeef",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --config prettier.config.js --write '**/*.+(ts|tsx|js|md|yml|yaml|json)'"
+  },
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.3",
+    "prettier-plugin-packagejson": "^2.4.0"
+  },
+  "packageManager": "pnpm@7.25.1"
+}
