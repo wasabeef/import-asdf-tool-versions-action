@@ -29,7 +29,7 @@ jobs:
 ### Samples
 Use with `subosito/flutter-action`
 ```yaml
-- uses: wasabeef/import-asdf-tool-versions-action@v1.0.0
+- uses: wasabeef/import-asdf-tool-versions-action@v1.0.1
   id: asdf
 - uses: subosito/flutter-action@v2.8.0
   with:
