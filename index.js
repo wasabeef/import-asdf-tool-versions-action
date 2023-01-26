@@ -20,6 +20,15 @@ const main = async () => {
     .split(/\r\n|\n/);
   content.forEach(function (line) {
     const tool = line.trim().split(/\s+/);
+
+    // A specifical case for flutter
+    // e.g. 3.7.0-stable -> 3.7.0
+    if (tool[0] === 'flutter') {
+      tool[1] = tool[1].replace(/-stable$/, '');
+      tool[1] = tool[1].replace(/\.pre-beta$/, '');
+      tool[1] = tool[1].replace(/\.pre-dev$/, '');
+    }
+
     core.setOutput(tool[0], tool[1]);
   });
 };

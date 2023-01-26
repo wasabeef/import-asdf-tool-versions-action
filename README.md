@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - uses: wasabeef/import-asdf-tool-versions-action@v1.0.0
+      - uses: wasabeef/import-asdf-tool-versions-action@v1.0.1
         id: asdf
         # with:
         #   path: .tool-versions # Default
