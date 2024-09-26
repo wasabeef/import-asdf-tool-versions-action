@@ -15,11 +15,11 @@ jobs:
         id: asdf
         with:
           path: .tool-versions
-      - name: Echo asdf 
-        run: | 
-          echo "${{ steps.asdf.outputs.flutter }}"
-          echo "${{ steps.asdf.outputs.dart }}"
-          echo "${{ steps.asdf.outputs.nodejs }}"
-          echo "${{ steps.asdf.outputs.gradle }}"
-          echo "${{ steps.asdf.outputs.java }}"
-          echo "${{ steps.asdf.outputs.kotlin }}"
+      - name: Echo asdf
+        run: |
+          echo "Flutter is ${{ steps.asdf.outputs.flutter }}"
+          echo "Dart is ${{ steps.asdf.outputs.dart }}"
+          echo "Node.js is ${{ steps.asdf.outputs.nodejs }}"
+          echo "Gradle is ${{ steps.asdf.outputs.gradle }}"
+          echo "Java is ${{ steps.asdf.outputs.java }}"
+          echo "Kotlin is ${{ steps.asdf.outputs.kotlin }}"

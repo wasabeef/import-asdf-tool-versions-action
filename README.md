@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - uses: wasabeef/import-asdf-tool-versions-action@v1.0.1
+      - uses: wasabeef/import-asdf-tool-versions-action@v1
         id: asdf
         # with:
         #   path: .tool-versions # Default
@@ -29,9 +29,9 @@ jobs:
 ### Samples
 Use with `subosito/flutter-action`
 ```yaml
-- uses: wasabeef/import-asdf-tool-versions-action@v1.0.1
+- uses: wasabeef/import-asdf-tool-versions-action@v1
   id: asdf
-- uses: subosito/flutter-action@v2.8.0
+- uses: subosito/flutter-action@v2
   with:
     channel: stable
     flutter-version: ${{ steps.asdf.outputs.flutter }}
