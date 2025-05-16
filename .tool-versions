@@ -7,6 +7,6 @@ ruby    3.3.5
 
 gradle 8.10.2
 java zulu-23.28.85
-kotlin 2.0.20
+kotlin 2.1.21
 
 
