@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 'latest'
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Lint
+        run: bun run lint
+
+      - name: Test
+        run: bun run test
+
+      - name: Build
+        run: bun run build
+
+      - name: Import .tool-versions
+        uses: ./
+        id: asdf
+        with:
+          path: .tool-versions
+
+      - name: Setup Bun with asdf version
+        if: steps.asdf.outputs.bun != ''
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: ${{ steps.asdf.outputs.bun }}
+
+      - name: Check outputs from action
+        run: |
+          echo "From action - Node.js is ${{ steps.asdf.outputs.nodejs }}"
+          echo "From action - Ruby is ${{ steps.asdf.outputs.ruby }}"
+          echo "From action - Flutter is ${{ steps.asdf.outputs.flutter }}"
+          echo "From action - Dart is ${{ steps.asdf.outputs.dart }}"
+          echo "From action - Bundler is ${{ steps.asdf.outputs.bundler }}"
+          echo "From action - CocoaPods is ${{ steps.asdf.outputs.cocoapods }}"
+          echo "From action - Java is ${{ steps.asdf.outputs.java }}"
+          echo "From action - Google Cloud CLI is ${{ steps.asdf.outputs.gcloud }}"
+          echo "From action - Bun is ${{ steps.asdf.outputs.bun }}"
+          echo "From action - Xcodegen is ${{ steps.asdf.outputs.xcodegen }}"
+          echo "From action - FlutterGen is ${{ steps.asdf.outputs.fluttergen }}"
