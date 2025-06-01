@@ -22,7 +22,7 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "ncc build src/index.ts -o dist",
     "format": "prettier --config prettier.config.js --write '**/*.+(ts|tsx|js|md|yml|yaml|json)'",
     "lint": "eslint .",
     "prepare": "bun run build",
@@ -38,6 +38,7 @@
     "@types/node": "^22.15.29",
     "@typescript-eslint/eslint-plugin": "^8.33.0",
     "@typescript-eslint/parser": "^8.33.0",
+    "@vercel/ncc": "^0.38.1",
     "eslint": "^9.28.0",
     "jest": "^29.7.0",
     "prettier": "^3.3.3",
