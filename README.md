@@ -1,5 +1,8 @@
 # ⚒️ Import .tool-versions of asdf to GitHub Actions
 
+[![GitHub release](https://img.shields.io/github/release/wasabeef/import-asdf-tool-versions-action.svg)](https://github.com/wasabeef/import-asdf-tool-versions-action/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This GitHub Action imports tool versions from your `.tool-versions` file (used by [asdf-vm](https://asdf-vm.com/)) and makes them available as outputs in your GitHub Actions workflows.
 
 ## Usage
