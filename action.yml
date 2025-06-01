@@ -1,6 +1,6 @@
 name: 'Import .tool-versions'
 description: 'Import .tool-versions file to GitHub Actions workflow'
-author: "Daichi Furiya / @wasabeef"
+author: 'wasabeef'
 inputs:
   path:
     description: '.tool-versions path'
@@ -8,4 +8,7 @@ inputs:
     default: '.tool-versions'
 runs:
   using: 'node20'
-  main: 'index.js'
+  main: 'dist/index.js'
+branding:
+  icon: 'book'
+  color: 'blue'

@@ -1,12 +1,14 @@
-dart 3.5.3
-flutter 3.24.3-stable
 
-nodejs      22.9.0
+flutter    3.24.5
+dart       3.5.4
 
-ruby    3.3.5
+bundler    2.4.12
+cocoapods  1.16.2
+java       temurin-17.0.14+7
+gcloud     485.0.0
 
-gradle 8.10.2
-java zulu-23.28.85
-kotlin 2.0.20
+bun        1.2.14
+xcodegen   2.41.0
 
+fluttergen 5.8.0
 

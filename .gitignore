@@ -1,0 +1,11 @@
+# SpecStory
+.specstory/
+
+# Dependencies
+node_modules/
+
+# Build artifacts
+dist/
+
+# Bun
+.bun-lock 
