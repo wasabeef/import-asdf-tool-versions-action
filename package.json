@@ -1,6 +1,6 @@
 {
   "name": "import-asdf-tool-versions-action",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Import .tool-versions file to GitHub Actions workflow",
   "keywords": [
     "import",
